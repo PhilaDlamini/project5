@@ -1,4 +1,4 @@
-package chesstype;
+package chess;
 
 import europeanpieces.BishopPiece;
 import europeanpieces.KingPiece;
@@ -7,7 +7,6 @@ import europeanpieces.PawnPiece;
 import europeanpieces.QueenPiece;
 import europeanpieces.RookPiece;
 import graphics.ChessBoard;
-import graphics.ChessGame;
 import graphics.SwingChessBoard;
 import graphics.SwingEuropeanChessDisplay;
 import piecetypes.ChessPiece;

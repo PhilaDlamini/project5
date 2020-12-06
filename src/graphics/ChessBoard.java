@@ -1,6 +1,7 @@
 package graphics;
 import javax.swing.SwingUtilities;
 
+import chess.ChessGame;
 import piecetypes.ChessPiece;
 
 /**
@@ -75,7 +76,7 @@ public abstract class ChessBoard {
 	 * @param row    the row this piece is on
 	 * @param column the column this piece is on
 	 * @param piece  the piece at this row and column
-	 * @return true if an opponent piece can move to this row and column and capture the piece here
+	 * @return true if an opponent piece can move to this square and capture the piece here
 	 */
 	public abstract boolean squareThreated(int row, int column, ChessPiece piece);
 	

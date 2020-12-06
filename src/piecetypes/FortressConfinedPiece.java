@@ -1,19 +1,18 @@
 package piecetypes;
-import graphics.ChessGame;
-import graphics.ChessGame.Side;
+import chess.ChessGame;
+import chess.ChessGame.Side;
 
 /**
- * A piece that is constrained to the fortress in the game 
- * A FortressConfinedPiece cannot leave the fortress: the center three columns and bottom three rows, or
- * the center three columns and the top three rows.  
- * @author <em> Phila Dlamini </em>
+ * A piece that is constrained to the fortress. A FortressConfinedPiece cannot leave the 
+ * fortress: the center three columns and bottom three rows, or center three columns and the top three rows.  
+ * @author Phila Dlamini
  *
  */
 public interface FortressConfinedPiece {
 	
 	/**
-	 * Returns true if the row and column this piece is moving to is within the piece's constraints
-	 * @return true if the row and column this piece is moving to is within the piece's constraints
+	 * Returns true if the row and column this piece is moving to is in the fortress
+	 * @return true if the row and column this piece is moving to is in the fortress
 	 */
 	public static boolean withinConfinement(ChessPiece piece, int toRow, int toColumn) {
 		return isInFortress(piece.getChessBoard().getGameRules(), piece.getSide(), toRow, toColumn);

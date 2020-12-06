@@ -1,6 +1,6 @@
 package europeanpieces;
+import chess.ChessGame;
 import graphics.ChessBoard;
-import graphics.ChessGame;
 import piecetypes.DiagonallyMovingPiece;
 import piecetypes.HorizontallyMovingPiece;
 import piecetypes.SingleDirectionPiece;

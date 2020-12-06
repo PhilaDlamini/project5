@@ -1,5 +1,6 @@
 package graphics;
-import chesstype.Xiangqi;
+import chess.ChessGame;
+import chess.Xiangqi;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;

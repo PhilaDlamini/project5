@@ -1,6 +1,6 @@
 package xiangqipieces;
+import chess.ChessGame;
 import graphics.ChessBoard;
-import graphics.ChessGame;
 import piecetypes.FortressConfinedPiece;
 import piecetypes.DiagonallyMovingPiece;
 import piecetypes.SingleDirectionPiece;

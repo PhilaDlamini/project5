@@ -1,8 +1,8 @@
 package europeanpieces;
 import javax.swing.JOptionPane;
 
+import chess.ChessGame;
 import graphics.ChessBoard;
-import graphics.ChessGame;
 import piecetypes.ChessPiece;
 import piecetypes.DiagonallyMovingPiece;
 import piecetypes.SingleDirectionPiece;

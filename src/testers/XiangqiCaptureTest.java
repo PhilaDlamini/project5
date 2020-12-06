@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import chesstype.Xiangqi;
+import chess.ChessGame;
+import chess.Xiangqi;
 import europeanpieces.PawnPiece;
 import europeanpieces.RookPiece;
-import graphics.ChessGame;
 import graphics.SwingChessBoard;
 import graphics.SwingEuropeanChessDisplay;
 import xiangqipieces.CannonPiece;
@@ -18,7 +18,7 @@ import xiangqipieces.SoldierPiece;
 import xiangqipieces.XiangqiKingPiece;
 
 /**
- * Tests Xiangqi pieces for capture moves 
+ * Tests Xiangqi pieces for correct capture moves 
  * @author Phila Dlamini
  *
  */
@@ -30,6 +30,7 @@ class XiangqiCaptureTest {
 	@Test
 	void isLegalCaptureMove() {
 		
+		//Create a chess board and add all these pieces on it
 		SwingChessBoard board = new SwingChessBoard(new SwingEuropeanChessDisplay(), new Xiangqi());
 		CannonPiece cannon1 = new CannonPiece(board, ChessGame.Side.SOUTH, null);
 		RookPiece rook1 = new RookPiece(board, ChessGame.Side.SOUTH, null);
@@ -75,8 +76,6 @@ class XiangqiCaptureTest {
 		board.addPiece(soldier1, 3, 2); //crossed the river
 		board.addPiece(soldier2, 1, 5); 
 		board.addPiece(soldier3, 2, 5); 
-
-
 		
 		/** Tests for the CannonPiece **/
 		

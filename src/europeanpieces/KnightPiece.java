@@ -1,7 +1,7 @@
 package europeanpieces;
 
+import chess.ChessGame;
 import graphics.ChessBoard;
-import graphics.ChessGame;
 import piecetypes.TwoDirectionPiece;
 
 /**

@@ -2,9 +2,10 @@ package testers;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import chesstype.Xiangqi;
+
+import chess.ChessGame;
+import chess.Xiangqi;
 import europeanpieces.RookPiece;
-import graphics.ChessGame;
 import graphics.SwingChessBoard;
 import graphics.SwingEuropeanChessDisplay;
 import xiangqipieces.ElephantPiece;
@@ -12,7 +13,7 @@ import xiangqipieces.GuardPiece;
 import xiangqipieces.XiangqiKingPiece;
 
 /**
- * A tester class for Xiangqi chess rules
+ * Tests Xiangqi for enforcement of rules
  * @author Phila Dlamini
  *
  */
@@ -22,7 +23,7 @@ class XiangqiRulesTest {
 	 * Tests the Xiangqi movement rules 
 	 */
 	@Test
-	void testEuropeanRules() {
+	void testXiangqiRules() {
 		
 		//Create a chess board and place these pieces on it
 		Xiangqi chess = new Xiangqi();

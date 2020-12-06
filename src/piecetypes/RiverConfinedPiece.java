@@ -1,6 +1,6 @@
 package piecetypes;
 
-import graphics.ChessGame;
+import chess.ChessGame;
 
 /**
  * A piece that cannot cross the river in the game 
@@ -11,8 +11,8 @@ import graphics.ChessGame;
 public interface RiverConfinedPiece {
 
 	/**
-	 * Returns true if the row and column this piece is moving to is within the piece's constraints
-	 * @return true if the row and column this piece is moving to is within the piece's constraints
+	 * Returns true if the row and column this piece is moving to is below the river
+	 * @return true if the row and column this piece is moving to is below the river
 	 */
 	public static boolean withinConfinement(ChessPiece piece, int toRow, int toColumn) {
 				

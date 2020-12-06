@@ -1,8 +1,8 @@
 package xiangqipieces;
 
+import chess.ChessGame;
+import chess.ChessGame.Side;
 import graphics.ChessBoard;
-import graphics.ChessGame;
-import graphics.ChessGame.Side;
 import piecetypes.ChessPiece;
 import piecetypes.HorizontallyMovingPiece;
 import piecetypes.SingleDirectionPiece;

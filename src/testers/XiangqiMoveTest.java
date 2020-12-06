@@ -2,9 +2,9 @@ package testers;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-import chesstype.Xiangqi;
+import chess.ChessGame;
+import chess.Xiangqi;
 import europeanpieces.RookPiece;
-import graphics.ChessGame;
 import graphics.SwingChessBoard;
 import graphics.SwingEuropeanChessDisplay;
 import xiangqipieces.CannonPiece;
@@ -15,7 +15,7 @@ import xiangqipieces.SoldierPiece;
 import xiangqipieces.XiangqiKingPiece;
 
 /**
- * A tester class for the XiangQi chess pieces
+ * Tests Xiangqi chess pieces for correct moves
  * @author Phila Dlamini
  */
 
@@ -26,7 +26,6 @@ class XiangqiMoveTest {
 	 * The river goes in-between row index 4 and 5, and the fortress is the intersection of column 3 to 5 and, and
 	 * row 7 to 9 (south), or row 0 to 2 (north )
 	 */
-	
 
 	/**
 	 * Tests the XiangqiPiece's isLegalmove() method 
@@ -477,7 +476,7 @@ class XiangqiMoveTest {
 
 	/**
 	 * Tests the HorsePiece isLegalMove() method 
-	 * A HorsePiece moves exactly two moves: the first is a horizontal or vertical move, and the second a diagonal move
+	 * A HorsePiece moves exactly two spaces: the first move is a horizontal or vertical move, and the second a diagonal move
 	 * The square moving to on the first vertical or horizontal move must be empty, and the landing square must not 
 	 * contain a piece of the same player 
 	 */ 
@@ -1174,12 +1173,5 @@ class XiangqiMoveTest {
 		assertEquals(soldier2North.isLegalMove(7, 1), false);
 		//The piece here belongs to the same player 
 	}
-	
-
-/*
- * TODO: Write the tests for isLegalCaptureMove() and isLegalNonCaptureMove() methods
- * You don't need to wait as you can really do it now 
- * Do I need to test squareThreatened()? But thsi belongs to the SwingChessBoard
- */
 }
 

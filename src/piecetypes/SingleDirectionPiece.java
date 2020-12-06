@@ -1,10 +1,10 @@
 package piecetypes;
+import chess.ChessGame;
+import chess.ChessGame.Side;
 import graphics.ChessBoard;
-import graphics.ChessGame;
-import graphics.ChessGame.Side;
 
 /**
- * Defines a ChessPiece that can only move in one direction at once
+ * Defines a ChessPiece that can only move in one direction at once i.e horizontally, vertically and diagonally
  * By default, a SingleDirectionPiece does not skip pieces. i.e. It cannot not move from point A to B 
  * if there is a chess piece between A and B
  * A SingleDirectionPiece, by default, can move a number of steps equal to or less than the allowedStepsInDirection

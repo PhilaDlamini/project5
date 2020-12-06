@@ -1,11 +1,11 @@
 package piecetypes;
+import chess.ChessGame;
+import chess.ChessGame.Side;
 import graphics.ChessBoard;
-import graphics.ChessGame;
-import graphics.ChessGame.Side;
 
 /**
  * A ChessPiece in the game 
- * @author: Phila Dlamini
+ * @author Phila Dlamini
  */
 public abstract class ChessPiece {
 	

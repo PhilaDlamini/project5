@@ -1,9 +1,10 @@
 package testers;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
-import chesstype.EuropeanChess;
+
+import chess.ChessGame;
+import chess.EuropeanChess;
 import europeanpieces.BishopPiece;
 import europeanpieces.KingPiece;
 import europeanpieces.KnightPiece;
@@ -12,7 +13,6 @@ import europeanpieces.QueenPiece;
 import europeanpieces.RookPiece;
 import graphics.SwingChessBoard;
 import graphics.SwingEuropeanChessDisplay;
-import graphics.ChessGame;
 
 /**
  * Tests European pieces for correct capture and non-capture moves

@@ -3,19 +3,19 @@ package testers;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-import chesstype.EuropeanChess;
+import chess.ChessGame;
+import chess.EuropeanChess;
 import europeanpieces.BishopPiece;
 import europeanpieces.KingPiece;
 import europeanpieces.KnightPiece;
 import europeanpieces.PawnPiece;
 import europeanpieces.QueenPiece;
 import europeanpieces.RookPiece;
-import graphics.ChessGame;
 import graphics.SwingChessBoard;
 import graphics.SwingEuropeanChessDisplay;
 
 /**
- * A tester class for the European chess pieces 
+ * Tests European chess pieces for correct movements
  * @author Phila Dlamini
  *
  */

@@ -4,8 +4,10 @@ import piecetypes.ChessPiece;
 
 import java.util.ArrayList;
 import java.util.List;
-import chesstype.EuropeanChess;
-import chesstype.Xiangqi;
+
+import chess.ChessGame;
+import chess.EuropeanChess;
+import chess.Xiangqi;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -16,8 +18,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
- * A ChessBoard displayed with JavaFX
- * 
+ * A ChessBoard displayed with JavaFX, on which a European or Xiangqi game can be played
  * @author Phila Dlamini
  *
  */
@@ -31,9 +32,7 @@ public class JavaFXChessBoard extends Application {
 	private ChessGame chessGame;
 
 	/**
-	 * Puts the displays for the application on the screen for the correct version
-	 * of chess
-	 * 
+	 * Displays the board and starts the game of chess
 	 * @param primaryStage the primary display stage for the board
 	 */
 	@Override
@@ -41,6 +40,8 @@ public class JavaFXChessBoard extends Application {
 
 		// Get the command line arguments
 		List<String> args = getParameters().getRaw();
+		args = new ArrayList<>();
+		args.add("chess");
 
 		// If no arguments were given, tell the user to input them
 		if (args.size() != 0) {
@@ -79,7 +80,7 @@ public class JavaFXChessBoard extends Application {
 	}
 
 	/**
-	 * The board being displayed
+	 * The ChessBoard being displayed with JavaFX
 	 */
 	private class Board extends ChessBoard {
 

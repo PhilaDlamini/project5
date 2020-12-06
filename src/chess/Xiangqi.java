@@ -1,11 +1,10 @@
-package chesstype;
+package chess;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import europeanpieces.RookPiece;
 import graphics.ChessBoard;
-import graphics.ChessGame;
 import piecetypes.ChessPiece;
 import piecetypes.VerticallyMovingPiece;
 import xiangqipieces.CannonPiece;
@@ -76,7 +75,7 @@ public class Xiangqi implements ChessGame {
 				return ChessGame.super.makeMove(piece, toRow, toColumn); // Ensure the move is legal
 			
 		} else if (legalPieceToPlay(piece, toRow, toColumn) && piece.getColumn() == toColumn) {
-			//Else if the piece is staying on this column
+			//Else the piece is staying on this column
 			
 			//If the piece is a king capturing another on this column, ensure the two kings won't face each other after the capture
 			if(piece instanceof XiangqiKingPiece && piece.getChessBoard().hasPiece(toRow, toColumn)) {
@@ -168,7 +167,7 @@ public class Xiangqi implements ChessGame {
 	 * @param piece			the king piece performing the capture
 	 * @return true if the two kings will be left facing each other one of them captures a piece on this column
 	 */
-	public boolean kingsWillFaceAfterCapture(ChessPiece piece) {
+	private boolean kingsWillFaceAfterCapture(ChessPiece piece) {
 		
 		//Analyze this column and find out if both kings are on the column 
 		Map<String, Object> columnData = getColumnData(piece.getChessBoard(), piece.getColumn());
@@ -196,7 +195,7 @@ public class Xiangqi implements ChessGame {
 	 * @param column		the column to analyze
 	 * @return information about whether or not the kings are on this column  
 	 */
-	public Map<String, Object> getColumnData(ChessBoard board, int column) {
+	private Map<String, Object> getColumnData(ChessBoard board, int column) {
 		
 		//A map to hold the data
 		LinkedHashMap<String, Object> columnData = new LinkedHashMap<String, Object>();

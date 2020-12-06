@@ -42,7 +42,6 @@ public interface VerticallyMovingPiece {
 	 */
 	public static int piecesInRange(ChessPiece piece, int toRow) {
 		
-		
 		//The start row 
 		int startRow = piece.getRow() < toRow ? piece.getRow() + 1 : toRow  + 1;
 		

@@ -9,8 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-import chesstype.EuropeanChess;
-import chesstype.Xiangqi;
+import chess.ChessGame;
+import chess.EuropeanChess;
+import chess.Xiangqi;
 import piecetypes.ChessPiece;
 
 /**
@@ -20,7 +21,6 @@ import piecetypes.ChessPiece;
  *
  */
 
-//Fully implement this class also 
 public class SwingChessBoard extends ChessBoard {
 
 	// The squares for the board
@@ -29,9 +29,14 @@ public class SwingChessBoard extends ChessBoard {
 	// The board
 	private JFrame board;
 
-	// Indicates how the chess board should be display
+	// Indicates how the chess board should be displayed
 	private SwingChessBoardDisplay chessBoardDisplay;
 
+	/**
+	 * Constructs the SwingChessBoard
+	 * @param chessBoardDisplay			the display information for this board 
+	 * @param gameRules					the chess game being played on this board
+	 */
 	public SwingChessBoard(SwingChessBoardDisplay chessBoardDisplay, ChessGame gameRules) {
 		super(gameRules);
 		this.chessBoardDisplay = chessBoardDisplay;
@@ -62,7 +67,7 @@ public class SwingChessBoard extends ChessBoard {
 
 					// Put the squares on the board and display them
 					board.add(panel);
-					board.setSize(500, 500); //TODO: What should be the size exactly??
+					board.setSize(500, 500); 
 					board.setVisible(true);
 				}
 			});
@@ -183,7 +188,7 @@ public class SwingChessBoard extends ChessBoard {
 			}
 		};
 
-		// run the code to change the display on the event dispatch thread to avoid drawing errors
+		// run the code to change the display on the event dispatch thread 
 		if (SwingUtilities.isEventDispatchThread())
 			addPiece.run();
 		else {
@@ -217,11 +222,4 @@ public class SwingChessBoard extends ChessBoard {
 		}
 		return false;
 	}
-	
-	/*
-	public static void main(String[] args) {
-		EuropeanChess chess = new EuropeanChess();
-	SwingChessBoard board = new SwingChessBoard(new SwingEuropeanChessDisplay(), new EuropeanChess());
-	chess.startGame(board);
-	}*/
 }

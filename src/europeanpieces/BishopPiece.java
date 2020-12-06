@@ -1,8 +1,8 @@
 package europeanpieces;
 import piecetypes.DiagonallyMovingPiece;
 import piecetypes.SingleDirectionPiece;
+import chess.ChessGame;
 import graphics.ChessBoard;
-import graphics.ChessGame;
 
 /**
  * The BishopPiece in the game 

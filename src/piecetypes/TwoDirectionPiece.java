@@ -1,7 +1,7 @@
 package piecetypes;
+import chess.ChessGame;
+import chess.ChessGame.Side;
 import graphics.ChessBoard;
-import graphics.ChessGame;
-import graphics.ChessGame.Side;
 
 /**
  * Defines a ChessPiece that may move in two directions at once
@@ -36,7 +36,12 @@ public abstract class TwoDirectionPiece extends ChessPiece {
 		this.distanceRatio = distanceRatio;
 	}
 
-	// How do we implement this one then??
+	/**
+	 * Returns true if it is legal to move this piece to the specified row and column
+	 * 
+	 * @param toRow    the row this piece is being moved to
+	 * @param toColumn the column this piece is being moved to
+	 */
 	@Override
 	public boolean isLegalMove(int toRow, int toColumn) {
 

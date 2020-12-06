@@ -2,12 +2,18 @@ package testers;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import chesstype.EuropeanChess;
+
+import chess.ChessGame;
+import chess.EuropeanChess;
 import europeanpieces.PawnPiece;
 import graphics.SwingChessBoard;
 import graphics.SwingEuropeanChessDisplay;
-import graphics.ChessGame;
 
+/**
+ * Tests EuropeanChess for enforcement of rules 
+ * @author phila
+ *
+ */
 class EuropeanRulesTest {
 
 	/**

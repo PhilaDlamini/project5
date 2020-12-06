@@ -88,8 +88,12 @@ public class JavaFXEuropeanChessDisplay implements JavaFXChessBoardDisplay {
 				color = southPlayerColor;
 		}
 		
+		//The square's background color
 		BackgroundFill background = new BackgroundFill((column + row) % 2 == 0 ? primaryDark : primaryLight, CornerRadii.EMPTY, Insets.EMPTY);
+		
+		//The piece's color 
 		BackgroundFill pieceColor = new BackgroundFill(color, new CornerRadii(button.getWidth() / 2), new Insets(5));
+		
 		button.setBackground(new Background(background, pieceColor));
 		button.setText(piece.getLabel());
 	}
@@ -104,7 +108,11 @@ public class JavaFXEuropeanChessDisplay implements JavaFXChessBoardDisplay {
 	 */ 
 	@Override
 	public void highlightSquare(boolean highlight, Button button, int row, int column, ChessPiece piece) {
+		
+		//The square's background color
 		BackgroundFill background = new BackgroundFill((column + row) % 2 == 0 ? primaryDark : primaryLight, CornerRadii.EMPTY, Insets.EMPTY);
+		
+		//The piece's color
 		BackgroundFill pieceColor = new BackgroundFill(highlightColor, new CornerRadii(button.getWidth() / 2), new Insets(5));
 		if(highlight) 
 			button.setBackground(new Background(background, pieceColor));

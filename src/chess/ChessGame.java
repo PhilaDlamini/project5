@@ -1,4 +1,5 @@
-package graphics;
+package chess;
+import graphics.ChessBoard;
 import piecetypes.ChessPiece;
 
 /**
