@@ -257,7 +257,7 @@ public class JavaFXChessBoard extends Application {
 		try {
 		Application.launch(args);
 		} catch (Exception e) {
-			System.out.print("An error occured. The version of chess requested is most likely unsupported");
+			System.out.print("An error occured. The version of chess requested is most likely unavailable");
 		}
 	}
 }
